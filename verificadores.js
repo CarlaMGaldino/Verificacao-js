@@ -1,36 +1,37 @@
-var valorA = 2;
-var valorB = 2;
+var valorA = 20;
+var valorB = 8;
 
-function operadores() {
-  if (valorA == valorB) {
-    console.log("O valor é igual");
+function comparaValores() {
+  if (valorA === valorB) {
+    console.log(`Os números ${valorA} e ${valorB} são iguais.`);
   } else {
-    console.log("O Valor é diferente");
+    console.log(`Os números ${valorA} e ${valorB} não são iguais.`);
   }
 }
-operadores();
-
-function somaValores() {
-  let somaValores = valorA + valorB;
-  console.log(somaValores);
-
-  if (somaValores > 10 && somaValores < 20) {
-    console.log(`A soma dos valores A + B é maior que 10 e menor 20`);
-  } else if (somaValores > 20) {
-    console.log("A soma dos valores A + B é maior que 10 e é maior que 20");
-  } else {
-    console.log("A soma dos valores A + B é menor que 10");
-  }
-}
-somaValores();
+comparaValores();
 
 function valoresFinais() {
-  let igualDiferente = valorA == valorB;
   let somaDosValores = valorA + valorB;
+  let defineDez = "maior que";
+  let defineVinte = "maior que";
 
-  if (valorA == valorB && somaDosValores < 20) {
-    console.log(`Os numeros ${valorA} e ${valorB} são iguais. Sua soma é ${somaDosValores}, que é menor que 10 e menor que 20.`);
+  if (somaDosValores < 10) {
+    defineDez = "menor que";
   }
+
+  if (somaDosValores === 10) {
+    defineDez = "igual a";
+  }
+
+  if (somaDosValores < 20) {
+    defineVinte = "menor que";
+  }
+
+  if (somaDosValores === 20) {
+    defineVinte = "igual a";
+  }
+
+  console.log(`Sua soma é ${somaDosValores}, que é ${defineDez} 10 e ${defineVinte} 20.`);
 }
 
 valoresFinais();
